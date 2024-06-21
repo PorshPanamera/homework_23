@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>homework 20_2</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>СОСИСКА НА ЛЫЖАХ</h1>
+    <nav>
+      <ul class="menu">
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Овощи</a>
+          <ul class="dropdown-content">
+            <li><a href="./pagePomidori.html">Помидоры</a></li>
+            <li><a href="./pageOgurci.html">Огурцы</a></li>
+            <li><a href="./pageLuk.html">Лук</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Фрукты</a>
+          <ul class="dropdown-content">
+            <li><a href="/pageBanan.html">Банан</a></li>
+            <li><a href="./pageJabloki.html">Яблоки</a></li>
+            <li><a href="./pageKlubnika.html">Клубника</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Снеки</a>
+          <ul class="dropdown-content">
+            <li><a href="./pageChips.html">Чипсы с крабом</a></li>
+            <li><a href="./pageSuhari.html">Сухарики с икрой</a></li>
+            <li><a href="./pageNuts.html">Орешки</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Мясо</a>
+          <ul class="dropdown-content">
+            <li><a href="./pageChikensBust.html">Грудинка</a></li>
+            <li><a href="./pageChikensHurts.html">Сердечки куринные</a></li>
+            <li><a href="./pageFish.html">Сёмга</a></li>
+          </ul>
+        </li>
+        <li><a href="./index.html">Главная</a></li>
+        <li><a href="#" class="js_orders">Мои заказы</a></li>
+      </ul>
+    </nav>
+    <div class="products">
+      <img src="./img/IMG_6065.jpg" alt="img" />
+      <h2 class="name_of_product">
+        Орешки
+        <p class="sum_price">78.90 грн</p>
+      </h2>
+
+      <button class="js_btn">Купить</button>
+    </div>
+    <div class="order_form d_none">
+      <form class="orderForm">
+        <label for="fullName">ФИО покупателя:</label>
+        <input type="text" id="fullName" name="fullName" required /><br />
+        <label for="city">Город:</label>
+        <select id="city" name="city" required>
+          <option value="">Выберите город</option>
+          <option value="Kyiv">Киев</option>
+          <option value="Lviv">Львов</option>
+          <option value="Odesa">Одесса</option></select
+        ><br />
+        <label for="novaPoshta">Склад Новой почты:</label>
+        <input type="text" id="novaPoshta" name="novaPoshta" required /><br />
+        <label>Оплата:</label>
+        <input type="radio" id="cash" name="payment" value="cash" required />
+        <label for="cash">Послеплата</label>
+        <input type="radio" id="card" name="payment" value="card" required />
+        <label for="card">Оплата банковской картой</label><br />
+        <label for="quantity">Количество продуктов:</label>
+        <input type="number" id="quantity" name="quantity" required /><br />
+        <label for="comment">Коментарий к заказу:</label>
+        <textarea id="comment" name="comment"></textarea><br />
+        <button type="button" id="submitOrder">Подтвердите заказ</button>
+      </form>
+    </div>
+    <div class="confirm d_none">
+      <button class="confirm_close">x</button>
+      <div class="confirm_body">
+        <p>Вы добавили товар в корзину :)</p>
+      </div>
+    </div>
+    <div class="confirm_overlay d_none"></div>
+    <div class="order_summary d_none">
+      <h2>Информация про заказ</h2>
+      <p id="orderInfo"></p>
+    </div>
+    <div class="orders_list d_none">
+      <h2>Мои заказы</h2>
+      <ul id="orders"></ul>
+      <button class="back_to_menu">Назад к меню</button>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
